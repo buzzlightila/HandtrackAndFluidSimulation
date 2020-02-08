@@ -8,6 +8,6 @@ I mixed two amazing projects: [HandTrack](https://github.com/victordibia/handtra
 ![](public/handtrack_fluid_simulation.gif)
 
 ##### To do:
-* [ ] Fix canvas tracking hand on Fluid Simulation
+* [x] Fix canvas tracking hand on Fluid Simulation
 * [ ] Fix "Play Here"
 * [ ] Track more hands

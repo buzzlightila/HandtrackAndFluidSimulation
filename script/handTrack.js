@@ -5,6 +5,7 @@ const context = canvas.getContext('2d')
 
 let isVideo = false
 let model = null
+const screenScale = 2.5
 
 const modelParams = {
   flipHorizontal: true,
@@ -41,8 +42,8 @@ const runDetection = () => {
       if (pointer == null) {
         pointer = new pointerPrototype()
       }
-      const x = predictions[0].bbox[0]
-      const y = predictions[0].bbox[1]
+      const x = predictions[0].bbox[0] * screenScale
+      const y = predictions[0].bbox[1] * screenScale
       updatePointerHand(pointer, scaleByPixelRatio(x), scaleByPixelRatio(y))
     }
 
