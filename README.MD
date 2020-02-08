@@ -10,3 +10,4 @@ I mixed two amazing projects: [HandTrack](https://github.com/victordibia/handtra
 ##### To do:
 * [ ] Fix canvas tracking hand on Fluid Simulation
 * [ ] Fix "Play Here"
+* [ ] Track more hands
