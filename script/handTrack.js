@@ -2,6 +2,7 @@ const video = document.getElementById('myvideo')
 const handimg = document.getElementById('handimage')
 const canvas = document.getElementById('canvas')
 const context = canvas.getContext('2d')
+let audio
 
 let isVideo = false
 let model = null
@@ -38,6 +39,9 @@ const updatePointerHand = (pointer, posX, posY) => {
 const runDetection = () => {
   model.detect(video).then(predictions => {
     if (predictions.length !== 0) {
+      const randNum = Math.round(Math.random() * (4 - 1) + 1)
+      audio = new Audio(`./sounds/Swoosh_${randNum}.mp3`)
+      audio.play()
       let pointer = pointers.find(p => p.id === -1)
       if (pointer == null) {
         pointer = new pointerPrototype()
