@@ -40,7 +40,8 @@ const runDetection = () => {
   model.detect(video).then(predictions => {
     if (predictions.length !== 0) {
       const randNum = Math.round(Math.random() * (4 - 1) + 1)
-      audio = new Audio(`./sounds/Swoosh_${randNum}.mp3`)
+      audio = new Audio(`./sounds/Effect_${randNum}.mp3`)
+      audio.volume = 0.2
       audio.play()
       let pointer = pointers.find(p => p.id === -1)
       if (pointer == null) {
